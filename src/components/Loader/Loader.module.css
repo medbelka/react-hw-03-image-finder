@@ -1,0 +1,10 @@
+.LoaderContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.LoaderButton {
+    margin: 0 auto;
+}
