@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Searchbar from "./Searchbar/Searchbar";
-import { ImageGallery } from "./ImageGallery/ImageGallery";
+import ImageGallery from "./ImageGallery/ImageGallery";
 import { Button } from "./Button/Button";
 import { Loader } from "./Loader/Loader";
 
@@ -14,8 +14,6 @@ class App extends Component {
   }
 
   handleSubmit = (query) => {
-    // if(query) {
-    // this.setState({currentQuery: {query}})}
     this.setState({status: 'pending'})
     fetch(`https://pixabay.com/api/?q=${query}&page=${this.state.page}&key=31724230-253e766dd89bfc3ec07cd5393&image_type=photo&orientation=horizontal&per_page=12`)
     .then(response => {
@@ -47,6 +45,7 @@ class App extends Component {
       page: prevState.page + 1,
     }));
   }
+
 
   render() {
 
